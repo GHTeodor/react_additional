@@ -4,7 +4,7 @@ import '../Pages.css';
 
 
 const DogPage = () => {
-    const refreshPage = ()=>{
+    const refreshPage = () => {
         window.location.reload();
     }
 

@@ -4,7 +4,7 @@ import '../Pages.css';
 
 
 const GirlPage = () => {
-    const refreshPage = ()=>{
+    const refreshPage = () => {
         window.location.reload();
     }
 

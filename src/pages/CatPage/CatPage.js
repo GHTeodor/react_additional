@@ -4,7 +4,7 @@ import '../Pages.css';
 
 
 const CatPage = () => {
-    const refreshPage = ()=>{
+    const refreshPage = () => {
         window.location.reload();
     }
 

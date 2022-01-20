@@ -4,7 +4,7 @@ import '../Pages.css';
 
 
 const NotebookPage = () => {
-    const refreshPage = ()=>{
+    const refreshPage = () => {
         window.location.reload();
     }
 

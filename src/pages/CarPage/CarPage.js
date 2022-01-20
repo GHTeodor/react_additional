@@ -4,7 +4,7 @@ import '../Pages.css';
 
 
 const CarPage = () => {
-    const refreshPage = ()=>{
+    const refreshPage = () => {
         window.location.reload();
     }
 
