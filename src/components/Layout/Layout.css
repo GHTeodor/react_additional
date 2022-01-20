@@ -1,0 +1,27 @@
+.layout {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav_Layout {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.content {
+    margin: auto 0;
+}
+
+div > a > button {
+    width: 30vw;
+    font-size: 30px;
+}
+
+div > a[class='active'] > button {
+    border-radius: 8px;
+    color: deeppink;
+    text-decoration: underline;
+}

@@ -1,0 +1,15 @@
+div > button {
+    border-radius: 8px;
+    width: 480px;
+    align-self: flex-end;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.page > div {
+    height: 560px;
+}
