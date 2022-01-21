@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 
 
 const Notebook = () => {
@@ -21,7 +21,7 @@ const Notebook = () => {
 
     return (
         <div>
-            <img src={imgUrl} alt="Notebook" />
+            <img src={imgUrl} alt="Notebook"/>
             <button onClick={getImg}>new Notebook</button>
         </div>
     );
