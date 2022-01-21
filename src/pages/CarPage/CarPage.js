@@ -1,19 +1,14 @@
 import React from 'react';
 
 import '../Pages.css';
+import Car from "../../components/photos/Car";
 
 
 const CarPage = () => {
-    const refreshPage = () => {
-        window.location.reload();
-    }
 
     return (
         <div className='page'>
-            <div>
-                <img src="https://loremflickr.com/480/560/car" alt="Car"/>
-            </div>
-            <button onClick={refreshPage}>new Car</button>
+            <Car/>
         </div>
     );
 };

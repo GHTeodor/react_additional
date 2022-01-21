@@ -1,20 +1,14 @@
 import React from 'react';
 
 import '../Pages.css';
+import Notebook from "../../components/photos/Notebook";
 
 
 const NotebookPage = () => {
-    const refreshPage = () => {
-        window.location.reload();
-    }
-
 
     return (
         <div className='page'>
-            <div>
-                <img src="https://loremflickr.com/480/560/notebook" alt="Notebook"/>
-            </div>
-            <button onClick={refreshPage}>new Notebook</button>
+            <Notebook/>
         </div>
     );
 };
