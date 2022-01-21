@@ -1,14 +1,14 @@
 import React, {useEffect, useState} from "react";
+import {girl_Service} from "../../services/girl_Service";
 
 
 const Girl = () => {
     const [imgUrl, setImgUrl] = useState();
 
     const getImg = async () => {
-        const response = await fetch('https://loremflickr.com/480/560/girl');
-        const imageBlob = await response.blob();
+        const response = await girl_Service.get1();
         const reader = new FileReader();
-        reader.readAsDataURL(imageBlob);
+        reader.readAsDataURL(response.data);
         reader.onloadend = () => {
             const base64data = reader.result;
             setImgUrl(base64data);

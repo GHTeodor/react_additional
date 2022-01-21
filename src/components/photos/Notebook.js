@@ -1,14 +1,14 @@
 import React, {useEffect, useState} from "react";
+import {notebook_Service} from "../../services/notebook_Service";
 
 
 const Notebook = () => {
     const [imgUrl, setImgUrl] = useState();
 
     const getImg = async () => {
-        const response = await fetch('https://loremflickr.com/480/560/notebook');
-        const imageBlob = await response.blob();
+        const response = await notebook_Service.get1();
         const reader = new FileReader();
-        reader.readAsDataURL(imageBlob);
+        reader.readAsDataURL(response.data);
         reader.onloadend = () => {
             const base64data = reader.result;
             setImgUrl(base64data);
