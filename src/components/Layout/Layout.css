@@ -1,0 +1,8 @@
+header {
+    background-color: deepskyblue;
+}
+
+header > a {
+    text-decoration: none;
+    color: honeydew;
+}

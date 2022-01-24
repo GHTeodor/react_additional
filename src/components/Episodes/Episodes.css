@@ -1,0 +1,16 @@
+.episodes {
+    border: teal double thin;
+}
+
+.episodes > a {
+    text-decoration: none;
+    color: darkviolet;
+}
+
+.episodes > a:hover {
+    box-shadow: darkblue 0 30px 90px;
+    background-color: ghostwhite;
+    border-radius: 10px;
+    margin: 1%;
+    transition: .3s;
+}
