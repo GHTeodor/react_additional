@@ -39,7 +39,7 @@ const EpisodesPage = () => {
     };
 
     return (
-        <>
+        <div>
             <div className='episodesPage'>
                 {episodes.map(episode =>
                     <Episodes key={episode.id} episode={episode}/>)}
@@ -49,7 +49,7 @@ const EpisodesPage = () => {
                 >{page}&lt;
                 <button onClick={nextPage}>next</button>
             </div>
-        </>
+        </div>
     );
 };
 

@@ -3,7 +3,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
     padding: 1%;
-    height: 80vh;
+    height: 85vh;
 }
 
 .buttons {
@@ -11,7 +11,6 @@
 }
 
 .buttons > button {
-    margin: 15px;
     background-color: lightcyan;
     border-radius: 3px;
     border: blueviolet double thin;
