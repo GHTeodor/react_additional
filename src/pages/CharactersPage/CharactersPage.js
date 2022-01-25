@@ -9,7 +9,8 @@ const CharactersPage = () => {
 
     return (
         <div className='charactersPage'>
-            {state.map(character => <Characters key={character} character={character}/>)}
+            {state.map(characters => <Characters key={characters.split('/').pop()}
+                                                 characters={characters}/>)}
         </div>
     );
 };

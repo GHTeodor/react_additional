@@ -6,7 +6,7 @@ import {EpisodesPage, CharactersPage, NotFound} from "./pages";
 
 function App() {
     return (
-        <>
+        <div>
             <Routes>
                 <Route path={'/'} element={<Layout/>}>
                     <Route index element={<Navigate to={'episodes'}/>}/>
@@ -15,7 +15,7 @@ function App() {
                     <Route path={'*'} element={<NotFound/>}/>
                 </Route>
             </Routes>
-        </>
+        </div>
     );
 }
 

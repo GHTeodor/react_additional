@@ -1,21 +1,21 @@
 import React, {useState, useEffect} from 'react';
 
-import {characters_Service} from "../../services/characters_Service";
 import Character from "./Character";
 import './Characters.css';
+import {axiosService} from "../../services/axiosService";
 
 
-const Characters = ({character}) => {
+const Characters = ({characters}) => {
 
-    const [char, setChar] = useState([]);
+    const [character, setCharacter] = useState([]);
 
     useEffect(() => {
-        characters_Service.get1Char(character.split('/')[5]).then(value => setChar(value));
+        axiosService.get(characters).then(value => setCharacter(value));
     }, []);
 
     return (
         <div>
-            <Character key={char.id} character={char}/>
+            <Character key={character.id} character={character}/>
         </div>
     );
 };

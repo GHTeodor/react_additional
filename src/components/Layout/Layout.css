@@ -1,8 +1,20 @@
 header {
-    background-color: deepskyblue;
+    background-color: slateblue;
 }
 
 header > a {
+    background-color: slateblue;
     text-decoration: none;
-    color: honeydew;
+    color: wheat;
+}
+
+header > a:hover {
+    margin-left: 1%;
+    transition: .3s;
+}
+
+.layout {
+    background: linear-gradient(0.45turn, thistle, lightcyan);
+    height: 97vh;
+    overflow-y: auto;
 }

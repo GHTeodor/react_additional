@@ -5,12 +5,13 @@
 .episodes > a {
     text-decoration: none;
     color: darkviolet;
+    background: -webkit-linear-gradient(0.45turn, darkorchid, purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .episodes > a:hover {
-    box-shadow: darkblue 0 30px 90px;
-    background-color: ghostwhite;
-    border-radius: 10px;
+    border-bottom: violet solid thin;
     margin: 1%;
     transition: .3s;
 }

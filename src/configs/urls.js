@@ -4,5 +4,4 @@ export default baseURL;
 
 export const urls = {
     episodes: "/episode",
-    characters: "/character"
 };

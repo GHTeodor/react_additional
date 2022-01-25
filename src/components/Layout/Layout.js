@@ -6,7 +6,7 @@ import './Layout.css';
 
 const Layout = () => {
     return (
-        <>
+        <div className='app'>
             <header>
                 <NavLink to={'/episodes'}>
                     Rick and Morty
@@ -15,7 +15,7 @@ const Layout = () => {
             <div className='layout'>
                 <Outlet/>
             </div>
-        </>
+        </div>
     );
 };
 

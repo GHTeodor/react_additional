@@ -1,28 +1,41 @@
 import React, {useEffect, useState} from 'react';
 
 import Episodes from "../../components/Episodes/Episodes";
-import {episodes_Service} from "../../services/episodes_Service";
 import './EpisodePage.css';
+import baseURL, {urls} from "../../configs/urls";
+import {axiosService} from "../../services/axiosService";
 
 
 const EpisodesPage = () => {
     const [episodes, setEpisodes] = useState([]);
-    let [num, setNum] = useState(1);
-    useEffect(() => {
-        episodes_Service.getPage(num).then(value => setEpisodes(value.results));
-    }, [num]);
+    const [episodesPageInfo, setEpisodesInfo] = useState({});
+    let [page, setPage] = useState(1);
+    let [num, setNum] = useState(baseURL + urls.episodes);
 
-    const increment = () => {
-        if (num + 1 > 3) {
-            setNum(num = 0);
-        }
-        setNum(++num);
+    useEffect(() => {
+        axiosService.get(num).then(value => {
+            setEpisodes(value.results);
+            setEpisodesInfo(value.info);
+
+            if (num.indexOf("=") >= 0)
+                setPage(num.split("=").pop());
+            else
+                setPage(1);
+        });
+    }, [num, page]);
+
+    const nextPage = () => {
+        if (episodesPageInfo.next)
+            setNum(episodesPageInfo.next);
+        else if (episodesPageInfo.next === null)
+            setNum(baseURL + urls.episodes);
     };
-    const decrement = () => {
-        if (num - 1 < 1) {
-            setNum(num = 4);
-        }
-        setNum(--num);
+
+    const prevPage = () => {
+        if (episodesPageInfo.prev)
+            setNum(episodesPageInfo.prev);
+        else if (episodesPageInfo.prev === null)
+            setNum(`${baseURL}${urls.episodes}?page=${episodesPageInfo.pages}`)
     };
 
     return (
@@ -32,8 +45,9 @@ const EpisodesPage = () => {
                     <Episodes key={episode.id} episode={episode}/>)}
             </div>
             <div className='buttons'>
-                <button onClick={decrement}>prev</button>
-                <button onClick={increment}>next</button>
+                <button onClick={prevPage}>prev</button>
+                >{page}&lt;
+                <button onClick={nextPage}>next</button>
             </div>
         </>
     );
