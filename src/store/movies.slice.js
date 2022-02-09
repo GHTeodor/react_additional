@@ -78,7 +78,7 @@ const moviesSlice = createSlice({
             state.page = action.payload;
         },
         darkTheme: (state, action) => {
-            state.darkMode = action.payload
+            state.darkMode = action.payload;
         },
         firstPage: (state, action) => {
             state.page = action.payload;
