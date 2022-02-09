@@ -25,6 +25,17 @@ export const changePageThunk = createAsyncThunk(
     }
 );
 
+export const firstPageThunk = createAsyncThunk(
+    'moviesSlice/firstPageThunk',
+    async (page, {dispatch}) => {
+        try {
+            dispatch(firstPage(page));
+        } catch (e) {
+            console.error('=======changePageThunk\n', e);
+        }
+    }
+);
+
 export const buttonPageThunk = createAsyncThunk(
     'moviesSlice/changePageThunk',
     async (page, {dispatch}) => {
@@ -68,6 +79,9 @@ const moviesSlice = createSlice({
         },
         darkTheme: (state, action) => {
             state.darkMode = action.payload
+        },
+        firstPage: (state, action) => {
+            state.page = action.payload;
         }
     },
 
@@ -89,6 +103,6 @@ const moviesSlice = createSlice({
 
 const moviesReducer = moviesSlice.reducer;
 
-export const {changePage, changeButtonPage, darkTheme} = moviesSlice.actions;
+export const {changePage, firstPage, changeButtonPage, darkTheme} = moviesSlice.actions;
 
 export default moviesReducer;
