@@ -20,7 +20,7 @@ const GenresPage = () => {
             {status === 'pending' && <h1>Loading...</h1>}
             {error && <h2>{error}</h2>}
             {genres.genres?.map(genre_1 => <Genres key={genre_1.id} genres={genre_1}/>)}
-            {genres && <small>*beta works well only on the first pages</small>}
+            {genres && <small id="beta_small">*beta works well only on the first pages</small>}
         </div>
     );
 };

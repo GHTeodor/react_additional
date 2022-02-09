@@ -19,3 +19,16 @@
     rgba(0, 0, 0, 0.09) 0 16px 8px,
     rgba(0, 0, 0, 0.09) 0 32px 16px;
 }
+
+#beta_small {
+    animation: 3s linear 0s infinite alternate move_beta;
+}
+
+@keyframes move_beta {
+    from {
+        margin-left: -20%;
+    }
+    to {
+        margin-left: 20%;
+    }
+}
