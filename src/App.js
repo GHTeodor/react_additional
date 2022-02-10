@@ -1,9 +1,9 @@
-import './App.css';
 import {Routes, Route, Navigate} from "react-router-dom";
 
 import {Layout} from "./components";
 import {GenresPage, MoviesPage} from "./pages";
 import {Movie} from "./components/Movie/Movie";
+import './App.css';
 
 function App() {
 
