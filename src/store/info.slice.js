@@ -24,7 +24,7 @@ const infoSlice = createSlice({
     extraReducers: {
         [getInfoThunk.fulfilled]: (state, action) => {
             state.status = 'resolved';
-            state.movies = action.payload;
+            state.movieInfo = action.payload;
         },
         [getInfoThunk.fulfilled]: (state, action) => {
             state.status = 'resolved';
