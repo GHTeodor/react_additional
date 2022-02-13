@@ -4,7 +4,7 @@ import {useSelector} from "react-redux";
 
 import './Layout.css';
 import '../Dark_Light/Dark-Light.css';
-import {DarkLight} from "../Dark_Light/Dark_Light";
+import {Login, DarkLight} from "../index";
 
 
 const Layout = () => {
@@ -13,6 +13,7 @@ const Layout = () => {
     return (
         <>
             <header>
+                <Login/>
                 <NavLink to={"/movies"}>Movies</NavLink>
                 <NavLink to={"/genres"}>Genres</NavLink>
                 <DarkLight darkMode={darkMode}/>
