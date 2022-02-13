@@ -1,0 +1,18 @@
+div > button {
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+}
+
+div {
+    display: flex;
+}
+
+.buttons {
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25vw;
+    margin: 0 30px 0 10px;
+}
